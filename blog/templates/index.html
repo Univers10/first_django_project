@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,8 +35,8 @@
                 <!-- Title -->
                 <h4 class="card-title"><a>{{ article.title }}</a></h4>
                 <!-- Text -->
-                <p class="card-text">{{ article.desc}}</p>
-                <p class="card-text">{{ article.created_at | timesince}}</p>
+                <p class="card-text">{{ article.desc | truncatewords:8}}</p>
+                <p class="card-text">Il y a {{ article.created_at | timesince}}</p>
                 <!-- Button -->
                 <a href="#" class="btn btn-primary">Button</a>
             
